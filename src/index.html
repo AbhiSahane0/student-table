@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Assignment</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="font-montserrat bg-blue-200">
+    <!-- Navbar section -->
+    <header class="mt-10 flex justify-between">
+      <h1 class="ml-10 text-2xl font-bold text-blue-600">
+        Student Registration System
+      </h1>
+      <nav class="flex">
+        <ul class="mr-20 flex cursor-pointer gap-10 font-medium">
+          <li
+            class="rounded-3xl border border-blue-400 p-2 text-blue-400 hover:border-blue-600 hover:text-blue-600"
+          >
+            Home
+          </li>
+          <li
+            class="rounded-3xl border border-blue-400 p-2 text-blue-400 hover:border-blue-600 hover:text-blue-600"
+          >
+            Contact Us
+          </li>
+          <li
+            class="rounded-3xl border border-blue-400 p-2 text-blue-400 hover:border-blue-600 hover:text-blue-600"
+          >
+            About
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Student registration form -->
+    <div
+        class="mx-20 mt-16 justify-evenly rounded-2xl border border-blue-400 pb-10 shadow-xl hover:shadow-2xl"
+      >
+        <h3 class="mt-10 text-center text-2xl font-bold text-blue-600">
+          Fill the Data
+        </h3>
+        <form id="student-form" class="grid grid-cols-3 gap-10 p-8">
+          <!-- Input filed for student name -->
+          <section class="mx-auto">
+            <label for="name" class="font-medium"
+              >Enter your Name* <br
+            /></label>
+            <input
+              id="student-name"
+              type="text"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <!-- input filed for students classs -->
+          <section class="mx-auto">
+            <label for="name" class="font-medium">Enter your ID* <br /></label>
+            <input
+              id="student-id"
+              type="number"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <!-- input field for students id -->
+          <section class="mx-auto">
+            <label for="name" class="font-medium"
+              >Enter your Class <br
+            /></label>
+            <input
+              id="student-class"
+              type="number"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <section class="mx-auto">
+            <label for="name" class="font-medium"
+              >Enter your Phone No* <br
+            /></label>
+            <input
+              id="student-phone"
+              type="text"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <section class="mx-auto">
+            <label for="name" class="font-medium">Enter Roll No* <br /></label>
+            <input
+              id="student-roll"
+              type="number"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <section class="mx-auto">
+            <label for="name" class="font-medium"
+              >Enter your E-Mail* <br />
+            </label>
+            <input
+              id="student-email"
+              type="email"
+              class="rounded-xl border-1 border-blue-400 p-2 ring-0 outline-0 hover:border-blue-600"
+              required
+            />
+          </section>
+
+          <!-- input field for students phone number -->
+          <button
+            type="submit"
+            id="submit-btn"
+            class="col-span-3 mx-auto mt-8 w-1/4 rounded-lg border-1 border-blue-400 p-3 hover:border-blue-600 hover:text-blue-500"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Data Table Section -->
+    <div
+      class="mx-20 mt-16 mb-20 rounded-2xl border border-blue-400 p-8 shadow-xl hover:shadow-2xl"
+    >
+      <h3 class="text-center text-2xl font-bold text-blue-600">Saved Data</h3>
+
+      <!-- Scrollable Table -->
+      <div class="mt-5 max-h-80 overflow-y-auto">
+        <table class="w-full border-collapse border border-blue-400">
+          <thead>
+            <tr class="bg-blue-300">
+              <th class="border border-blue-400 px-4 py-2">Name</th>
+              <th class="border border-blue-400 px-4 py-2">Roll No.</th>
+              <th class="border border-blue-400 px-4 py-2">ID</th>
+              <th class="border border-blue-400 px-4 py-2">Email</th>
+              <th class="border border-blue-400 px-4 py-2">Phone</th>
+              <th class="border border-blue-400 px-4 py-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
